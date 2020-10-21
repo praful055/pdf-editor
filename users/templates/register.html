@@ -1,0 +1,135 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Dreams Template">
+    <meta name="keywords" content="Dreams, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PDF Editor - Register</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'dist/favicon.ico' %}">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'wed/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/style.css' %}" type="text/css">
+    
+</head>
+
+<body >
+    <header class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-md-2">
+                <div class="header__logo">
+                    <a href=""><img src="{% static 'wed/img/logo.png' %}" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-9">
+                <nav class="header__menu mobile-menu">
+                    <ul>
+                        <li><a href="home"><i>Home</i></a></li>
+                        <li><a href="#"><i>Edit</i></a>
+                            <ul class="dropdown">
+                                <li><a href="split">Split</a></li>
+                                <li><a href="merge">Merge</a></li>
+                                <li><a href="compress">Compress</a></li>
+                                <li><a href="encrypt">Encrypt</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i>Convert</i></a>
+                            <ul class="dropdown">
+                                <li><a href="image">Image</a></li>
+                                <li><a href="#">HTML</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="login"><i>Sign In</i></a></li>
+                        <li><a href="./contact.html"><i>Contact</i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-2 col-md-1">
+                <div class="header__right">
+                    <div class="header__right__social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+    </div>
+    </header>
+    <br><br><br><br><br><br><br>
+    <div class="praful">
+        <form method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Create an account</legend>
+                {{ form|crispy }}  
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Already have an Account?<a class="ml-2" href="{% url 'login' %}">Sign In</a>
+            </small>
+        </div>
+    </div>
+    </div>
+
+<br><br><br><br><br><br>
+    <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h5></h5>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h5>Phone & email</h5>
+                    <ul>
+                        <li>support@gmail.com</li>
+                        <li>+91 888-999-9999</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h5>Address</h5>
+                    <p>Room No. 62, Lapis Hostel, NIT Trichy, Tiruchirappali 620 015</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="{% static 'wed/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'wed/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'wed/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'wed/js/mixitup.min.js' %}"></script>
+<script src="{% static 'wed/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'wed/js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'wed/js/masonry.pkgd.min.js' %}"></script>
+<script src="{% static 'wed/js/jquery.slicknav.js' %}"></script>
+<script src="{% static 'wed/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'wed/js/main.js' %}"></script>
+</body>
+
+</html>

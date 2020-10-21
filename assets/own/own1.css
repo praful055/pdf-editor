@@ -1,0 +1,197 @@
+body {
+    background: white;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    height: 100%;
+    margin: auto;
+    text-shadow: 0 0px 2px rgba(245, 245, 245, .25);
+  }
+  
+  #container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .75);
+    margin: auto;
+    width: auto;
+  }
+  
+  .box-input {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .box-input svg {
+    width: 5rem;
+    height: 5rem;
+    vertical-align: middle;
+    fill: currentColor;
+  }
+  
+  form {
+    color: #fff;
+  }
+  
+  input[type="button" i],
+  input[type="file" i]::-webkit-file-upload-button {
+    display: none!important;
+  }
+  
+  .box.has-advanced-upload {
+    -webkit-transition: all .15s ease-in-out, background-color .15s linear;
+    transition: all .15s ease-in-out, background-color .15s linear;
+  }
+  
+  .box {
+    position:absolute;
+    top:218px;
+    left:513px;
+    font-size: 1.25rem;
+    background-color: #761cca;
+    border: 1px solid rgb(32, 12, 12);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, .75);
+    padding: 5rem 8rem;
+    width: 500px;
+    height:500px;
+  }
+  
+  .js .box-file {
+    width: .1px;
+    height: .1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .box-input label {
+    margin: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+  }
+  
+  .js .box-file + label * {
+    pointer-events: none;
+  }
+  
+  .js .box-file:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+  input[type="text"], textarea {
+      background-color : white; 
+    }
+  
+  input, select, textarea{
+      text-align: center;
+      color: black;
+  }
+  
+  textarea:focus, input:focus {
+      color: black;
+  }
+  
+  button {
+    background: #4a018f;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+    color: #fff;
+    display: -webkit-box;
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: auto;
+    margin-top: 2.5rem;
+    overflow: auto;
+    padding: 1rem 1.5rem;
+  }
+  
+  button:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .5);
+  }
+  
+  button:active {
+    box-shadow: none;
+  }
+  
+  .box-uploading {
+    font-style: italic;
+  }
+  
+  .box-success {
+    -webkit-transition: appear-from-inside .25s ease-in-out;
+    transition: appear-from-inside .25s ease-in-out;
+  }
+  
+  .box__success {
+    -webkit-animation: appear-from-inside .25s ease-in-out;
+            animation: appear-from-inside .25s ease-in-out;
+  }
+  
+  @-webkit-keyframes appear-from-inside {
+    from {
+      -webkit-transform: translateY( -50%) scale( 0);
+              transform: translateY( -50%) scale( 0);
+    }
+    75% {
+      -webkit-transform: translateY( -50%) scale( 1.1);
+              transform: translateY( -50%) scale( 1.1);
+    }
+    to {
+      -webkit-transform: translateY( -50%) scale( 1);
+              transform: translateY( -50%) scale( 1);
+    }
+  }
+  
+  @keyframes appear-from-inside {
+    from {
+      -webkit-transform: translateY( -50%) scale( 0);
+              transform: translateY( -50%) scale( 0);
+    }
+    75% {
+      -webkit-transform: translateY( -50%) scale( 1.1);
+              transform: translateY( -50%) scale( 1.1);
+    }
+    to {
+      -webkit-transform: translateY( -50%) scale( 1);
+              transform: translateY( -50%) scale( 1);
+    }
+  }
+  
+  .box-restart {
+    font-weight: 700;
+  }
+  
+  input,
+  textarea,
+  select {
+    border-radius: 0;
+    border: none;
+  }
+  
+  input {
+    line-height: normal;
+  }
+  
+  .box-dragndrop,
+  .box-icon,
+  .box-uploading,
+  .box-success,
+  .box-error {
+    display: none;
+  }
+  
+  .box.has-advanced-upload .box-dragndrop {
+    display: inline;
+  }
+  
+  strong {
+    color: #fff;
+  }
+
+  

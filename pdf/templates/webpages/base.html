@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Dreams Template">
+    <meta name="keywords" content="Dreams, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PDF Editor</title>
+    {% load static %}
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'dist/favicon.ico' %}">
+    <!-- Css Styles -->
+    <link rel='stylesheet' href="{% static 'split/own2.css' %}" type="text/css">
+    <link rel='stylesheet' href="{% static 'split/own3.css' %}" type="text/css">
+    <link rel='stylesheet' href="{% static 'split/own1.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/style.css' %}" type="text/css">
+    
+</head> 
+
+<body>
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 col-md-2">
+                    <div class="header__logo">
+                        <a href=""><img src="{% static 'wed/img/logo.png' %}" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-9">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li><a href="home"><i>Home</i></a></li>
+                            <li><a href="#"><i>Edit</i></a>
+                                <ul class="dropdown">
+                                    <li><a href="split">Split</a></li>
+                                    <li><a href="merge">Merge</a></li>
+                                    <li><a href="compress">Compress</a></li>
+                                    <li><a href="encrypt">Encrypt</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i>Convert</i></a>
+                                <ul class="dropdown">
+                                    <li><a href="image">Image</a></li>
+                                    <li><a href="web">HTML</a></li>
+                                </ul>
+                            </li>
+                            {% if user.is_authenticated %}
+                                <li><a href="profile"><i>Profile</i></a></li>
+                                <li><a href="logout" ><i>Sign Out</i></a></li>
+                            {% else %}
+                                <li><a href="login"><i>Sign In</i></a></li>
+                                <li><a href="register"><i>Sign Up</i></a></li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2 col-md-1">
+                    <div class="header__right">
+                        <div class="header__right__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+    {% block content %}
+    
+    {% endblock %}
+    <!-- Feature Section End -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h5></h5>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h5>Phone & email</h5>
+                        <ul>
+                            <li>support@gmail.com</li>
+                            <li>+91 888-999-9999</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h5>Address</h5>
+                        <p>Room No. 62, Lapis Hostel, NIT Trichy, Tiruchirappali 620 015</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- Footer Section End -->
+
+
+<!-- Js Plugins -->
+<script src="{% static 'wed/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'wed/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'wed/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'wed/js/mixitup.min.js' %}"></script>
+<script src="{% static 'wed/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'wed/js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'wed/js/masonry.pkgd.min.js' %}"></script>
+<script src="{% static 'wed/js/jquery.slicknav.js' %}"></script>
+<script src="{% static 'wed/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'wed/js/main.js' %}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Dreams Template">
+    <meta name="keywords" content="Dreams, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PDF Editor - Split</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'dist/favicon.ico' %}">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'wed/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'wed/css/style.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'split/own2.css' %}" type="text/css">
+  <link rel='stylesheet' href="{% static 'split/own3.css' %}" type="text/css">
+  <link rel='stylesheet' href="{% static 'split/own1.css' %}" type="text/css">
+ 
+</head>
+
+<body translate="no" >
+  {% if alert_flag %}
+    <script>alert("Split point not valid")</script>  
+{% endif %}
+  <header class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-md-2">
+                <div class="header__logo">
+                    <a href=""><img src="{% static 'wed/img/logo.png' %}" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-9">
+                <nav class="header__menu mobile-menu">
+                    <ul>
+                        <li><a href="home"><i>Home</i></a></li>
+                            <li><a href="#"><i>Edit</i></a>
+                                <ul class="dropdown">
+                                    <li><a href="split">Split</a></li>
+                                    <li><a href="merge">Merge</a></li>
+                                    <li><a href="compress">Compress</a></li>
+                                    <li><a href="encrypt">Encrypt</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i>Convert</i></a>
+                                <ul class="dropdown">
+                                    <li><a href="image">Image</a></li>
+                                    <li><a href="web">HTML</a></li>
+                                </ul>
+                            </li>
+                            {% if user.is_authenticated %}
+                                <li><a href="profile"><i>Profile</i></a></li>
+                                <li><a href="logout" ><i>Sign Out</i></a></li>
+                            {% else %}
+                                <li><a href="login"><i>Sign In</i></a></li>
+                                <li><a href="register"><i>Sign Up</i></a></li>
+                            {% endif %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-2 col-md-1">
+                <div class="header__right">
+                    <div class="header__right__social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+    </div>
+  </header>
+  <br><br><br><br><br><br><br>
+  <h2 align="center" style="font-weight: bold">Split PDF</h2>
+  <h3 align="center">Extract pages from your PDF</h3>
+  <div id="container">
+  <form action=split1 method="post" enctype="multipart/form-data" novalidate="" class="box has-advanced-upload">
+    {% csrf_token %}
+    <div class="box-input">
+      <svg x="0px" y="0px" viewBox="0 0 64 62" style="enable-background:new 0 0 64 62;" xml:space="preserve">
+        <style type="text/css">
+          .st0{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+        </style>
+        <g id="spa-launch">
+          <path class="st0" d="M33,27.1h-8c0,0-2-6-2-12c0-8,6-14,6-14s6,6,6,14C35,21.1,33,27.1,33,27.1z"/>
+          <line class="st0" x1="29" y1="17.1" x2="29" y2="27.1"/>
+          <polyline class="st0" points="25,27.1 17,27.1 17,23.1 23.1,17.1 	"/>
+          <polyline class="st0" points="33,27.1 41,27.1 41,23.1 34.9,17.1 	"/>
+          <path class="st0" d="M18,41.2c0.5-5.7,5.2-10.1,11-10.1c5.1,0,9.3,3.4,10.6,8.1"/>
+          <path class="st0" d="M48,41.1c-0.2-3.4-3.1-6-6.5-6c-1.2,0-2.4,0.3-3.3,0.9"/>
+          <path class="st0" d="M42.3,47.1c0,0-1-4-6-4"/>
+          <path class="st0" d="M26.3,43.1c-3-1-4,2-4,2s-3-2-5,0s-1,4-1,4"/>
+          <path class="st0" d="M9,46.1c-0.8-0.6-1.9-1-3-1c-2.8,0-5,2.2-5,5s2.2,5,5,5h46c2.8,0,5-2.2,5-5c0-5-4-9-9-9
+            c-0.9,0-1.8,0.1-2.6,0.4"/>
+          <path class="st0" d="M18.8,37.9c-1.1-0.5-2.4-0.8-3.8-0.8c-4.6,0-8.5,3.5-8.9,8"/>
+        </g>
+        </svg>
+      <input type="file" name="document" id="file" class="box-file" accept="application/pdf">
+      <label for="file"><strong>Choose a file</strong><span class="box-dragndrop"></span></label>
+      <br>
+      Select a split point : <input type="text" class="input-box" name ="num1"><br>
+      <button type="submit" class="button">Upload</button>
+    </div>
+    <input type="hidden" name="ajax" value="1"></form>
+  </div>
+
+  <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+  <script id="rendered-js" >
+    //
+    'use strict';
+    
+    ;(function ($, window, document, undefined)
+    {
+      // feature detection for drag&drop upload
+    
+      var isAdvancedUpload = function ()
+      {
+        var div = document.createElement('div');
+        return ('draggable' in div || 'ondragstart' in div && 'ondrop' in div) && 'FormData' in window && 'FileReader' in window;
+      }();
+    
+    
+      // applying the effect for every form
+    
+      $('.box').each(function ()
+      {
+        var $form = $(this),
+        $input = $form.find('input[type="file"]'),
+        $label = $form.find('label'),
+        $errorMsg = $form.find('.box-error span'),
+        $restart = $form.find('.box-restart'),
+        droppedFiles = false,
+        showFiles = function (files)
+        {
+          $label.text(files.length > 1 ? ($input.attr('data-multiple-caption') || '').replace('{count}', files.length) : files[0].name);
+        };
+    
+        // automatically submit the form on file select
+        $input.on('change', function (e)
+        {
+          showFiles(e.target.files);
+    
+        });
+        $restart.on('click', function (e)
+        {
+          e.preventDefault();
+          $form.removeClass('is-error is-success');
+          $input.trigger('click');
+        });
+      });
+    
+    })(jQuery, window, document);
+    
+    //
+  </script> 
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h5></h5>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h5>Phone & email</h5>
+                    <ul>
+                        <li>support@gmail.com</li>
+                        <li>+91 888-999-9999</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h5>Address</h5>
+                    <p>Room No. 62, Lapis Hostel, NIT Trichy, Tiruchirappali 620 015</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="{% static 'wed/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'wed/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'wed/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'wed/js/mixitup.min.js' %}"></script>
+<script src="{% static 'wed/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'wed/js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'wed/js/masonry.pkgd.min.js' %}"></script>
+<script src="{% static 'wed/js/jquery.slicknav.js' %}"></script>
+<script src="{% static 'wed/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'wed/js/main.js' %}"></script>
+</body>
+
+</html>
